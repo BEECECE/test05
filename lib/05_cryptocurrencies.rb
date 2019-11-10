@@ -18,25 +18,25 @@ my_hash.each { |k, v| my_hash[k] = v.gsub("$", "").to_f }
 #Quelle est la ou les crypto-monnaie(s) qui a(ont) la plus grosse valeur ?
 max_key = my_hash.key(my_hash.values.max)
 max_value = my_hash[my_hash.key(my_hash.values.max)]
-    puts "1. The cryptocurrency worth the most is #{max_key} and its value is #{max_value}$."
+  puts "1. The cryptocurrency worth the most is #{max_key} and its value is #{max_value}$."
  
 #Quelle est la ou les crypto-monnaie(s) qui a(ont) la plus petite valeur ?
 min_key = my_hash.key(my_hash.values.min)
 min_value = my_hash[my_hash.key(my_hash.values.min)]
-    puts "2. The cryptocurrency worth the less is #{min_key} and its value is #{min_value}$."
+  puts "2. The cryptocurrency worth the less is #{min_key} and its value is #{min_value}$."
  
 #Quel est le nombre de crypto-monnaie(s) contenant le mot 'coin' dans leur nom ?
 coin = my_hash.count {|key, array| key =~ /[cC][Oo][Ii][nN]/}
-    puts "3. There are #{coin} cryptocurrencies with 'coin' within their name."
+  puts "3. There are #{coin} cryptocurrencies with 'coin' within their name."
  
 #Quelles sont les devises dont le cours est inférieur à 6000$ ?
 selection = my_hash.select{|key, value| value <= 6000}
-    puts "4. There are #{selection.count} cryptocurrencies with avalue under 6000$."
+  puts "4. There are #{selection.count} cryptocurrencies with avalue under 6000$."
 #puts "[bonus 4.2] Voulez-vous le détail des crypto-monnaies dont le cours est inférieur à 6000$ ?"
 #puts selection
  
 #Quelle est la devise la plus chère parmi celles dont le cours est inférieur à 6000$ ?
 max_key_6000 = selection.key(selection.values.max)
 max_value_6000 = selection[selection.key(selection.values.max)]
-    puts "5. The cryptocurrency with the largest value less than $ 6,000 is #{max_key_6000} and its value is #{max_value_6000}$."
+  puts "5. The cryptocurrency with the largest value less than $ 6,000 is #{max_key_6000} and its value is #{max_value_6000}$."
  

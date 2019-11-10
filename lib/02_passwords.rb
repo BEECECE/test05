@@ -22,12 +22,12 @@ def sign_up
     puts "Enter your pseudo ! "
     pseudo_2 = gets.chomp
     begin
-        puts "Enter your password ! "
-        password_3 = gets.chomp
+      puts "Enter your password ! "
+      password_3 = gets.chomp
     end while
-        password_3 != $password_2
+      password_3 != $password_2
 
-        end
+  end
 
 
   def welcome_screen  

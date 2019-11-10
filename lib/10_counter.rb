@@ -23,6 +23,6 @@ first = frequency.first
 puts "The most written word in this text is : \"#{first[0]}\" and it appears #{first[1]} times."
 
 frequency.each do |word|
-    puts "The word \"#{word[0]}\" appears #{word[1]} times."
+  puts "The word \"#{word[0]}\" appears #{word[1]} times."
 end
 
